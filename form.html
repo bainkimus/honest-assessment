@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+   
+    <title>Hello, world!</title>
+</head>
+<body>
+<div class="container">
+    <h1>Full-stack developer assignment</h1>
+
+    <table id="tableDeveloper"></table>
+
+    <form action="http://localhost:8080/" method="POST" content="application/x-www-form-urlencoded">
+        <div class="mb-3">
+            <label for="first_name" class="form-label">First Name</label>
+            <input name="first_name" type="text" class="form-control" id="first_name">
+        </div>
+        <div class="mb-3">
+            <label for="last_name" class="form-label">Last Name</label>
+            <input name="last_name" type="text" class="form-control" id="last_name">
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input name="email" type="email" class="form-control" id="email">
+        </div>
+        <div class="mb-3">
+            <label for="phone_number" class="form-label">Phone Number</label>
+            <input name="phone_number" type="tel" class="form-control" id="phone_number">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+
+
+</div>
+<!-- Optional JavaScript; choose one of the two! -->
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script> -->
+
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+<!--
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+-->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.js"></script>
+
+<script>
+
+$('#tableDeveloper').bootstrapTable({
+  url: '/',
+  columns: [{
+    field: 'first_name',
+    title: 'first Name'
+  }, {
+    field: 'last_name',
+    title: 'Last Name'
+  }, {
+    field: 'email',
+    title: 'Email'
+  }, {
+    field: 'phone_number',
+    title: 'Phone Number'
+  }]
+})
+
+</script>
+  
+</body>
+</html>
+
+
+
+
