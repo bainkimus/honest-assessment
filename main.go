@@ -130,7 +130,7 @@ func run() (s *http.Server) {
 	port = fmt.Sprintf(":%s", port)
 	router := mux.NewRouter()
 	router.HandleFunc("/", handleFunc)
-	router.HandleFunc("/addData", form)
+	router.HandleFunc("/form.html", form)
 
 	s = &http.Server{
 		Handler:        router,
@@ -143,7 +143,7 @@ func run() (s *http.Server) {
 	go func() {
 
 		log.Printf("listening on port ( %s )\n", port)
-		log.Printf("Add data path ( %s )\n", "/addData")
+		log.Printf("Add data path ( %s )\n", "/form.html")
 
 		if err := s.ListenAndServe(); err != nil && err != http.ErrServerClosed {
 			log.Fatalf("listen: %s\n", err)
