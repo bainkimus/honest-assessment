@@ -70,7 +70,6 @@ func handleFunc(resp http.ResponseWriter, req *http.Request) {
 
 	switch req.Method {
 	case http.MethodPost:
-		log.Println("MethodPost")
 		if err := req.ParseForm(); err != nil {
 			resp.WriteHeader(http.StatusBadRequest)
 			fmt.Fprint(resp, err.Error())
@@ -98,7 +97,6 @@ func handleFunc(resp http.ResponseWriter, req *http.Request) {
 		resp.WriteHeader(http.StatusOK)
 		fmt.Fprint(resp, "form saved ")
 	case http.MethodGet:
-		log.Println("MethodGet")
 		formDatas, err := getData()
 		if err != nil {
 			resp.WriteHeader(http.StatusInternalServerError)
